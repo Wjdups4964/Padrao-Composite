@@ -32,4 +32,15 @@ public class PecaComposta implements PecaCarro {
         }
         return total;
     }
+
+    @Override
+    public double somarPeso(double totalAcumulado) {
+        // Não imprime nada aqui — só repassa a responsabilidade
+        // pra cada filha, atualizando o total conforme cada uma soma.
+        double total = totalAcumulado;
+        for (PecaCarro peca : filhas) {
+            total = peca.somarPeso(total);
+        }
+        return total;
+    }
 }

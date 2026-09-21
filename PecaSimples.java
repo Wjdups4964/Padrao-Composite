@@ -21,4 +21,12 @@ public class PecaSimples implements PecaCarro {
     public double getPeso() {
         return peso;
     }
+
+    @Override
+    public double somarPeso(double totalAcumulado) {
+        double novoTotal = totalAcumulado + peso;
+        System.out.println("Somando agora o peso de " + nome + ": " + peso
+                + ". Total parcial: " + novoTotal);
+        return novoTotal;
+    }
 }
